@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>3479826782</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_userdefine.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_serial.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_timer.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_cgc_user.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_intc_user.c</file>
+            <file>$PROJ_DIR$\src\lcp_radio_driver.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_intc.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_adc_user.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_serial_user.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_timer.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_timer_user.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_intc.c</file>
+            <file>$PROJ_DIR$\src\lcp_fsm.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_port.h</file>
+            <file>$PROJ_DIR$\src\main.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_adc.h</file>
+            <file>$PROJ_DIR$\src\MyRL78.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_port.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_serial.c</file>
+            <file>$PROJ_DIR$\src\lcp_ax25.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_macrodriver.h</file>
+            <file>$PROJ_DIR$\src\lcp_ax25.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_port_user.c</file>
+            <file>$PROJ_DIR$\src\lcp_fsm.c</file>
+            <file>$PROJ_DIR$\src\lcp_radio_driver.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_adc.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_cgc.h</file>
+            <file>$PROJ_DIR$\src\r_driver\r_cg_cgc.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_timer_user.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_adc_user.o</file>
+            <file>$TOOLKIT_DIR$\lib\DLib_Config_Normal.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_serial.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_intc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_fsm.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_intc_user.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_adc.o</file>
+            <file>$PROJ_DIR$\Debug\Exe\lcp_flight_software.out</file>
+            <file>$PROJ_DIR$\src\LCD_4bit.h</file>
+            <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+            <file>$PROJ_DIR$\Debug\List\lcp_flight_software.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCD_4bit.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_port_user.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_port.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_fsm.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_timer.o</file>
+            <file>$TOOLKIT_DIR$\lib\dlrlnnf22n.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_cgc_user.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_cgc_user.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\ior5f100le.h</file>
+            <file>$TOOLKIT_DIR$\inc\ior5f100le_ext.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_intc_user.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_port_user.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_intc_user.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_ax25.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_fsm.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_intc.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCD_4bit.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_systeminit.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_timer_user.pbi</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_adc.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_adc_user.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_radio_driver.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCD_4bit.o</file>
+            <file>$TOOLKIT_DIR$\inc\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_adc.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_serial.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_cgc_user.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_serial_user.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_radio_driver.__cstat.et</file>
+            <file>$PROJ_DIR$\src\LCD_4bit.c</file>
+            <file>$PROJ_DIR$\src\r_driver\r_systeminit.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_systeminit.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_intc.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_serial_user.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_cgc.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_serial.pbi</file>
+            <file>$TOOLKIT_DIR$\config\lnkr5f100le.icf</file>
+            <file>$TOOLKIT_DIR$\lib\dbgrlnnf22nd.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_radio_driver.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_ax25.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_timer_user.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_port.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_port_user.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_cgc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_serial_user.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_systeminit.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_timer.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_adc_user.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_timer.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_port.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_ax25.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcp_flight_software.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\r_cg_cgc.__cstat.et</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 37 40</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 45</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 98</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 96</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 9 0 12 60 94 70 71 30 67 31 78 55 15 26 6 13 1</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 94 6 70 67 0 55 9 50 60 15 1 71 30 31 20 49 39 12 78 26 13</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_cgc_user.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 47</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 48</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 26 0 12 60 94 70 71 30 67 31 78 55 15 6 13 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 13 0 39 20 94 26 50 78 9 31 70 12 60 55 15 6 1 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_intc_user.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 35</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 53</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 51</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 6 0 12 60 94 70 71 30 67 31 78 55 15 26 13 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 13 0 39 20 94 6 50 78 26 9 31 70 12 60 55 15 1 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\lcp_radio_driver.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 65</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 85</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 74</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 60 94 70 71 30 67 31 78 55 20 49 50 39 15 26 6 13 1 9 0 12 16 24</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 0 1 31 70 39 60 15 50 30 55 6 16 94 71 67 49 78 20 26 13 9 24 12</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_adc_user.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 97</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 15 0 12 60 94 70 71 30 67 31 78 55 26 6 13 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 13 0 39 20 94 15 50 78 26 9 31 70 12 60 55 6 1 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_serial_user.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 73</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 80</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 93</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 1 0 12 60 94 70 71 30 67 31 78 55 15 26 6 13 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 12 70 49 6 71 31 0 39 55 30 1 50 60 15 67 94 20 78 26 13 9</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_timer_user.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 61</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 28</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 9 0 12 60 94 70 71 30 67 31 78 55 15 26 6 13 1</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_intc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 79</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 57</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 6 0 12 60 94 70 71 30 67 31 78 55 15 26 13 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 13 0 39 20 94 6 50 78 26 9 31 70 12 60 55 15 1 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 88</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 99</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 60 94 70 71 30 67 31 78 55 20 49 50 39 15 26 6 13 1 9 0 12 16 24 19</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 94 70 13 12 50 1 55 15 31 0 60 6 16 19 20 78 26 9 49 39 24 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 100</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 43</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 13 0 12 60 94 70 71 30 67 31 78 55 15 26 6 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 15 94 49 70 67 0 39 60 1 13 50 12 55 6 71 30 31 20 78 26 9</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_serial.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 32</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 82</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 69</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 1 0 12 60 94 70 71 30 67 31 78 55 15 26 6 13 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 60 31 1 49 15 70 94 0 39 55 6 50 12 78 20 26 13 9 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\lcp_ax25.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 101</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 54</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 60 94 70 71 30 67 31 78 55 20 49 50 39 15 26 6 13 1 9 0 12 16 24 19</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70 31 12 39 60 1 78 15 50 30 20 9 55 6 0 16 94 71 67 49 13 26 24 19</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_port_user.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 42</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 91</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 13 0 12 60 94 70 71 30 67 31 78 55 15 26 6 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 15 94 49 70 67 0 39 60 1 13 50 12 55 6 71 30 31 20 78 26 9</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\lcp_fsm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 44</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 60 94 70 71 30 67 31 78 55 20 49 50 39 15 26 6 13 1 9 0 12 16 24 19</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 31 13 12 1 55 15 50 70 94 0 60 6 16 20 78 26 9 49 39 24 19 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_adc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 36</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 63</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 15 0 12 60 94 70 71 30 67 31 78 55 26 6 13 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 13 0 39 20 94 15 50 78 26 9 31 70 12 60 55 6 1 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_cg_cgc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 81</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 26 0 12 60 94 70 71 30 67 31 78 55 15 6 13 1 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49 13 0 39 20 94 26 50 78 9 31 70 12 60 55 15 6 1 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\lcp_flight_software.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 83 101 34 65 89 36 29 92 72 33 35 100 42 32 73 45 87 95 84 46</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 88</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\LCD_4bit.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 58</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 60 94 70 71 30 67 31 78 55 49 50 39 16 38 24 20 15 26 6 13 1 9 0 12 19</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 94 38 67 49 55 78 39 71 70 60 50 16 24 31 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\r_driver\r_systeminit.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 95</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 77</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 59</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCRL78</name>
+                    <file> 20 49 50 39 26 13 6 1 15 9 0 12 60 94 70 71 30 67 31 78 55</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 1 60 13 9 50 94 26 6 15 0 49 39 12 55 31 70 20 78 71 30 67</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
