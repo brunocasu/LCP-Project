@@ -1,2 +1,9 @@
-# lcp-flight-software
-Main software to run in a Low Cost CubeSat Prototype (LCP), as part of the LCP project developed at the Centro Universitário FEI in Brazil 
+# Protótipo de um nanosatélite baseado na arquitetura CubeSat para radiodifusão
+(EN) This repository contains the main software to operate in the nanosatelite prototype (LCP) developed by the students at the Centro Universitário FEI (Brazil), as part of the Electric and Electronics Engineering Bachelors degree.
+
+(PT) Esse repositório é destinado ao software desenvolvido para operar no protótipo de um nanosatélite (LCP) desenvolvido pelos alunos do Centro Universitério da FEI, como parte do projeto de conclusão do curso de Engenharia Elétrica da instituição.
+
+### Project members
+- Bruno Augusto Casu Pereira de Sousa
+- Bruno Duarte dos Santos
+- Rodrigo Yudji Katagiri de Oliveira
