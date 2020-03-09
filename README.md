@@ -3,7 +3,6 @@
 
 (PT) Esse repositório é destinado ao software desenvolvido para operar no protótipo de um nanosatélite (LCP) desenvolvido pelos alunos do Centro Universitério da FEI, como parte do projeto de conclusão do curso de Engenharia Elétrica da instituição.
 
-### Project members
+### Author
 - Bruno Augusto Casu Pereira de Sousa
-- Bruno Duarte dos Santos
-- Rodrigo Yudji Katagiri de Oliveira
+
