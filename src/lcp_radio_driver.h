@@ -53,12 +53,14 @@ void system_delay_ms(unsigned char time);
 
 int radio_version_check (void);
 
-void radio_cold_reset (void);
+void radio_cold_reset (int time);
 
 void radio_reset_fifo (void);
 
 void radio_send_packet (uint8_t* pkt, uint8_t pkt_length);
 void radio_read_fixed_packet (uint8_t* pkt, uint8_t fixed_length);
+
+void radio_config_bit_rate (uint8_t bit_rate_MSB, uint8_t bit_rate_LSB, uint8_t FDA_MSB, uint8_t FDA_LSB);
 
 
 #endif

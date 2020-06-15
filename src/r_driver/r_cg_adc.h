@@ -185,5 +185,16 @@ void R_ADC_Set_OperationOff(void);
 void R_ADC_Get_Result(uint16_t * const buffer);
 
 /* Start user code for function. Do not edit comment generated here */
+// P03 - NTC0 - CHANNEL16
+// P02 - NTC1 - CHANNEL17
+// P147- NTC2 - CHANNEL18
+
+// P22 - LDR0 - CHANNEL2
+// P23 - LDR1 - CHANNEL3
+// P24 - LDR2 - CHANNEL4
+// P25 - LDR3 - CHANNEL5
+// P26 - LDR4 - CHANNEL6
+// P27 - LDR5 - CHANNEL7
+
 /* End user code. Do not edit comment generated here */
 #endif

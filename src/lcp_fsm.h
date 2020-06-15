@@ -34,20 +34,6 @@
 #include "r_driver/r_cg_timer.h"
 #include "r_driver/r_cg_userdefine.h"
 
-/**
- * @{
- * @brief macros used in the AX25 payload: the byte zero of the info filed is used 
- *        to identify what kind of message the payload is carring
- */
-#define READ_SENSORS_HEX                0xa1
-#define SENSORS_CAPABILITIES_INFO_HEX   0xa2
-#define STRING_MESSAGE_HEX              0xa3
-#define GET_TIME_INFO_HEX               0xa4
-#define LCP_NO_LAYER3_ERROR_HEX         0xe1
-#define INFO_CHECKSUM_ERROR_HEX         0xe2
-#define SEQUENCE_NUMBER_ERROR_HEX       0xe3
-///@}
-
 #define TIMEOUT                     1
 #define MSG_RECEIVED                2
 
@@ -61,6 +47,7 @@ typedef enum {  RX_MODE_WAITING_PKT,
 lcp_communication_status_t;
 
 extern lcp_communication_status_t com_status;
+extern uint8_t global_timeout_value;
 
 int lcp_state_machine (void);
 

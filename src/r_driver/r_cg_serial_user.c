@@ -123,6 +123,7 @@ static void r_csi00_callback_receiveend(void)
     /* Start user code. Do not edit comment generated here */
     spi_completion_flag = 1;
     CSS_RADIO_PORT = 1;
+    CSS_BME_280_PORT = 1;
     /* End user code. Do not edit comment generated here */
 }
 
@@ -138,6 +139,7 @@ static void r_csi00_callback_error(uint8_t err_type)
     /* Start user code. Do not edit comment generated here */
     spi_completion_flag = 1;
     CSS_RADIO_PORT = 1;
+    CSS_BME_280_PORT = 1;
     /* End user code. Do not edit comment generated here */
 }
 
@@ -152,6 +154,7 @@ static void r_csi00_callback_sendend(void)
     /* Start user code. Do not edit comment generated here */
     spi_completion_flag = 1;
     CSS_RADIO_PORT = 1;
+    CSS_BME_280_PORT = 1;
     /* End user code. Do not edit comment generated here */
 }
 

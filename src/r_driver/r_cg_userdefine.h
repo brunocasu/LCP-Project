@@ -33,23 +33,30 @@
 #include "../lcp_fsm.h"
 //#include "../lcp_ax25.h"
 
-#define CSS_RADIO_PORT      P7_bit.no0
-#define RESET_RADIO_PORT    P7_bit.no1
-#define CSS_BME_280_PORT    P7_bit.no2
-#define CSS_GYROSCOPE_PORT  P7_bit.no3
-#define CSS_GPS_PORT        P7_bit.no4
+#define CSS_RADIO_PORT          P7_bit.no0 // out
+#define RESET_RADIO_PORT        P7_bit.no1 // out
+#define CSS_BME_280_PORT        P7_bit.no2 // out
+#define CSS_GPS_PORT            P7_bit.no3 // out
+#define BATTERY_FAUL_PORT       P7_bit.no4 // in
+#define LED_PORT                P7_bit.no5 // out
+#define PWR_ON_LED_PORT         P7_bit.no6 // out
+#define FAULT_LED_PORT          P7_bit.no7 // out
 
-#define DIO_0_PORT          P5_bit.no0 // interrupt driven
-#define BATTERY_FAIL_PORT   P5_bit.no1 // interrupt driven
-#define DIO_2_PORT          P5_bit.no2  
-#define LED_PORT            P5_bit.no4
+#define DIO_0_PORT              P5_bit.no0 // in - interrupt driven
+#define DIO_2_PORT              P5_bit.no1 // in - interrupt driven
+// #define DIO_2_PORT           P5_bit.no2  
+// #define LED_PORT             P5_bit.no4
+
+#define MCU_ALIVE_PORT          P3_bit.no0 // main - out // backup - in
+
+#define SEONCDARY_MCU_RESET     P0_bit.no5 // out
+#define BATTERY_SWITCH_PORT     P0_bit.no6 // out
+
  /*
   *     SPI_CLK     P10
   *     SPI_MISO    P11
   *     SPI_MOSI    P12
   * 
-  *     ADC_CPU     P23
-  *     ADC_BATTERY P24
   * 
   */
 extern int spi_completion_flag;

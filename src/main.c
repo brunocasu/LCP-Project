@@ -35,12 +35,12 @@
 #include "ior5f100le.h"
 #include "ior5f100le_ext.h"
 #include "intrinsics.h"
-#include "MyRL78.h"
 // LCP development includes
 #include "lcp_radio_driver.h"
 #include "lcp_fsm.h"
 #include "lcp_ax25.h"
 #include "lcp_ax25.h"
+#include "lcp_sensors_driver.h"
 /* Set option bytes */
 #pragma location = "OPTBYTE"
 __root const uint8_t opbyte0 = 0xEFU;
@@ -58,7 +58,6 @@ __root const uint8_t secuid[10] =
     
 int system_config (void);
 void R_Systeminit(void);
-uint8_t count = 5;
 
 void main (void) // LCP MAIN SOFTWARE
 {
@@ -67,9 +66,7 @@ void main (void) // LCP MAIN SOFTWARE
     for(;;)
     {
         lcp_state_machine ();
-            
     }
-    //lcp_state_machine ();
 }
 
 /**
@@ -99,24 +96,59 @@ int system_config (void)
     PU7_bit.no1 = 1; // Pull-Up on
     RESET_RADIO_PORT = 1; // Start with High value
     
-    // RED LED
-    PM5_bit.no4 = 0; // PIN as OUTPUT
-    PU5_bit.no4 = 1; // Pull-Up on
+    // CHIP SELECT FOR BMP280 DEVICE
+    PM7_bit.no2 = 0; // PIN as OUTPUT
+    PU7_bit.no2 = 1; // Pull-Up on
+    CSS_BME_280_PORT = 1; // Start with High value
+    
+    // CHIP SELECT FOR GPS DEVICE
+    PM7_bit.no3 = 0; // PIN as OUTPUT
+    PU7_bit.no3 = 1; // Pull-Up on
+    CSS_BME_280_PORT = 1; // Start with High value
+    
+    // BATTERY FAULT INPUT
+    PM7_bit.no4 = 1; // PIN as INPUT
+    PU7_bit.no4 = 1; // Pull-Up on
+    
+    // RADIO COMMUNICATION STATUS LED
+    PM7_bit.no5 = 0; // PIN as OUTPUT
+    PU7_bit.no5 = 1; // Pull-Up on
     LED_PORT = 0; // Start with Low value
     
+    // POWER ON LED
+    PM7_bit.no6 = 0; // PIN as OUTPUT
+    PU7_bit.no6 = 1; // Pull-Up on
+    FAULT_LED_PORT = 0; // Start with Low value
+    
+    // FAULT LED
+    PM7_bit.no7 = 0; // PIN as OUTPUT
+    PU7_bit.no7 = 1; // Pull-Up on
+    PWR_ON_LED_PORT = 0; // Start with Low value
+    
+    // BATTERY SWITCH
+    PM0_bit.no6 = 0; // PIN as OUTPUT
+    PU0_bit.no6 = 1; // Pull-Up on
+    BATTERY_SWITCH_PORT = 1; // Start with High value (1=MAIN, 0=BACKUP)
+    
+    // RESET BACKUP RL78
+    PM0_bit.no5 = 0; // PIN as OUTPUT
+    PU0_bit.no5 = 1; // Pull-Up on
+    BATTERY_SWITCH_PORT = 1; // Start with High value (1=BACKUP DISABLED, 0=BACKUP ENABLED)
+    
+    // REFERENCE SIGNAL FOR BACKUP RL78
+    PM3_bit.no0 = 0; // PIN as OUTPUT
+    PU3_bit.no0 = 1; // Pull-Up on
+    BATTERY_SWITCH_PORT = 1; // Start with High value 
+    
     // DIO 0 - in TX: PacketSent Flag - in RX: PayloadReady Flag
-    PM5_bit.no0 = 1; // PIN50 set the INTP1 in Rising Edge
+    PM5_bit.no0 = 1; // INPUT - PIN50 set the INTP1 in Rising Edge
     PU5_bit.no0 = 0; // Pull-Up off
     // DIO_0_PORT
     
-    // INTERRUPT PORT 2 (can be used to check the battery status)
-    PM5_bit.no1 = 1; // PIN51 set the INTP2 in Rising Edge
+    // DIO 2 - can be used qith the interruption
+    PM5_bit.no1 = 1; // INPUT - PIN51 set the INTP2 in Rising Edge
     PU5_bit.no1 = 0; // Pull-Up off
     
-    // DIO 2 - in : PacketSent Flag
-    PM5_bit.no2 = 1; // PIN52 input for DIO2 signal: Rx ready (for eficeiency in mode configuration)
-    PU5_bit.no2 = 0; // Pull-Up off
-    // DIO_2_PORT
     
     LED_PORT = 1;
     // Radio Register configuration for FSK packet mode
@@ -128,30 +160,4 @@ int system_config (void)
     
     return (1);
 }
-/*
-        uint8_t buff[64];
-        radio_rx_mode();
-        com_status = RX_MODE_WAITING_PKT; // set global communication state
-        timeout_flag = 0; // clear flag
-        R_INTC1_Start(); // PORT 50 interrup in rising edge
-        R_TAU0_Channel0_Start(); // start timer
-        
-        // Wait for incoming message or timeout
-        while ( (com_status != RX_MODE_PKT_RECEIVED) && (timeout_flag < 15) )
-            __no_operation();
 
-        R_INTC1_Stop();
-        R_TAU0_Channel0_Stop(); // stop the timer
-        
-        if (com_status == RX_MODE_PKT_RECEIVED)
-        {
-            radio_read_fixed_packet (&buff[0], 64);
-            system_delay_ms(10);
-            buff[2]=count++;
-            radio_send_packet (&buff[0], 64);
-        }
-        else
-        {
-            led_1_blink ();
-        }
- */

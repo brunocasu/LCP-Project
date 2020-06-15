@@ -35,7 +35,6 @@
 #include "ior5f100le.h"
 #include "ior5f100le_ext.h"
 #include "intrinsics.h"
-#include "myRL78.h"
 // LCP development includes
 #include "lcp_radio_driver.h"
 
@@ -122,8 +121,12 @@ void radio_rx_mode (void)
 {
     sx1276_write_register (0x01, 0x00);
     sx1276_write_register (0x01, 0x05);
-    while (DIO_2_PORT == 0)
+    int n = 0;
+    while (DIO_2_PORT == 0 && n < 1000000)
+    {
         __no_operation(); // hold until config is done
+        n++;
+    }
 }
 
 /**
@@ -217,21 +220,37 @@ int radio_version_check (void)
         return 1;
     else 
     {
-        for(;;);
+        for(;;); // lock the processor if radio fault
     }
 }
 
 /**
  * @brief Force reset of the radio device (reset pin pulled down)
+ * 
+ * @param time value in multiple of 10ms of the amount of time the radio is disabled
+ * 
+ * @note WARNING: if param time has a value of zero the radio is permanentely disabled
  */
-void radio_cold_reset (void)
+void radio_cold_reset (int time)
 {
-    if (RESET_RADIO_PORT == 1)
+    if (time > 0)
     {
         RESET_RADIO_PORT = 0;
+        LED_PORT = 1;
         system_delay_ms (1);
+        for (int i=0; i<time; i++)
+            system_delay_ms (10);
+        
         RESET_RADIO_PORT = 1;
         system_delay_ms (5);
+        radio_register_config ();
+        LED_PORT = 0;
+    }
+    else
+    {
+        RESET_RADIO_PORT = 0;
+        LED_PORT = 1;
+        for(;;); // shut down the radio device
     }
 }
 
@@ -264,6 +283,8 @@ void radio_send_packet (uint8_t* pkt, uint8_t pkt_length)
     system_delay_ms(1);
     R_INTC1_Stop();
     radio_reset_fifo();
+    radio_sleep_mode ();
+    system_delay_ms(2);
 }
 
 /**
@@ -281,4 +302,18 @@ void radio_read_fixed_packet (uint8_t* pkt, uint8_t fixed_length)
         for(int i=0; i<fixed_length; i++)
             pkt[i]=sx1276_read_fifo();
     }
+    radio_reset_fifo();
+    radio_sleep_mode ();
+    system_delay_ms(2);
+}
+
+void radio_config_bit_rate (uint8_t bit_rate_MSB, uint8_t bit_rate_LSB, uint8_t FDA_MSB, uint8_t FDA_LSB)
+{
+    radio_sleep_mode ();
+    sx1276_write_register (0x02, bit_rate_MSB);
+    sx1276_write_register (0x03, bit_rate_LSB);
+    system_delay_ms(1);
+    sx1276_write_register (0x04, FDA_MSB & 0x3f);
+    sx1276_write_register (0x05, FDA_LSB);
+    system_delay_ms(2);
 }
