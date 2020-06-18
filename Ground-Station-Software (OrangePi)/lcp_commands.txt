@@ -1,0 +1,40 @@
+import lcp
+
+CTRL+C to stop the looping base function
+
+lcp.diconnect() - properly exit the program by closing SPI communicarion an cleaning all GPIOs
+
+lcp.radio_reg_cfg() - configures the radio
+
+lcp.radio_rssi_floor () - measure the noise floor of the environment
+
+lcp.base(time) - time>0 sets a timeout value, else the radio is maintained at receiver mode
+
+lcp.send_sensor_read () - request the telemetry data from LCP
+
+lcp.send_devices_info () - reques the devices info from LCP
+
+lcp.send_string_message ("target", "msg up to 37 char") - send string message to target (AX25 address)
+
+lcp.send_reset_radio (time_to_reset) - reset the radio device (time_to_reset*10 = time in miliseconds)
+
+lcp.send_set_sup_time (interval) - configure the interval between supervisory frames sent from the LCP in seconds
+
+lcp.send_blink (n_blink) - choose number of times the LED will blink
+
+lcp.send_supervisory (nr) - choose a sequence number (0<=nr<=7)
+
+lcp.set_bit_rate (msb_rate, lsb_rate, msb_fda, lsb_fda) - change the data rate of the satellite
+
+lcp.set_bit_rate (0x03, 0x41, 0x02, 0x8f)
+
+// examples: 0x68, 0x2a, 0x00, 0x52  -- 1,2kbps, 10kHz FDA
+// examples: 0x1a, 0x0b, 0x00, 0x52  -- 4,8kbps, 5kHz FDA
+// examples: 0x0d, 0x05, 0x00, 0xa3  -- 9,6kbps, 10kHz FDA
+// examples: 0x06, 0x83, 0x00, 0xa3  -- 19,2kbps, 10kHz FDA
+// examples: 0x03, 0x41, 0x02, 0x8f  -- 38,4kbps, 40kHz FDA
+// examples: 0x00, 0x80, 0x04, 0x00  -- 250kbps, 62,5kHz FDA
+
+lcp.change_battery (code) - 0x00 for only reading, 0xff to switch to backup, 0xf0 to switch to main.
+
+
