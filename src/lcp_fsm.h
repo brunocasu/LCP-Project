@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief Finite State Machine for the LCP Flight Software: implements the receiver routine and replies for commands form the Base Stations
  */
 

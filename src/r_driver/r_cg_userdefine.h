@@ -49,7 +49,7 @@
 
 #define MCU_ALIVE_PORT          P3_bit.no0 // main - out // backup - in
 
-#define SEONCDARY_MCU_RESET     P0_bit.no5 // out
+#define SECONDARY_MCU_RESET     P0_bit.no5 // out
 #define BATTERY_SWITCH_PORT     P0_bit.no6 // out
 
  /*

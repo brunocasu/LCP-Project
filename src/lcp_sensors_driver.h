@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief Driver for the attached sensros in the LCP
  */
 

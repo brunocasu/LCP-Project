@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief Driver for the attached sensros in the LCP
  */
 
@@ -32,8 +34,8 @@
 #include "r_driver/r_cg_timer.h"
 #include "r_driver/r_cg_userdefine.h"
 // RL78G13 includes
-#include "ior5f100le.h"
-#include "ior5f100le_ext.h"
+#include "ior5f100lg.h"
+#include "ior5f100lg_ext.h"
 #include "intrinsics.h"
 // LCP development includes
 #include "lcp_radio_driver.h"
@@ -51,7 +53,7 @@ uint8_t bmp280_write_register (uint8_t addr, uint8_t data);
  */
 void analog_sensors_read (uint8_t *data)
 {
-    uint16_t *channel_reading;
+    uint16_t *channel_reading = 0;
     int data_position = 0;
     
     R_ADC_Create();

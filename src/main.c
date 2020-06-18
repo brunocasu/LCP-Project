@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief main function and hardware configuration
  */
 
@@ -32,8 +34,8 @@
 #include "r_driver/r_cg_timer.h"
 #include "r_driver/r_cg_userdefine.h"
 // RL78G13 includes
-#include "ior5f100le.h"
-#include "ior5f100le_ext.h"
+#include "ior5f100lg.h"
+#include "ior5f100lg_ext.h"
 #include "intrinsics.h"
 // LCP development includes
 #include "lcp_radio_driver.h"
@@ -118,12 +120,12 @@ int system_config (void)
     // POWER ON LED
     PM7_bit.no6 = 0; // PIN as OUTPUT
     PU7_bit.no6 = 1; // Pull-Up on
-    FAULT_LED_PORT = 0; // Start with Low value
+    PWR_ON_LED_PORT = 0; // Start with Low value
     
     // FAULT LED
     PM7_bit.no7 = 0; // PIN as OUTPUT
     PU7_bit.no7 = 1; // Pull-Up on
-    PWR_ON_LED_PORT = 0; // Start with Low value
+    FAULT_LED_PORT = 0; // Start with Low value
     
     // BATTERY SWITCH
     PM0_bit.no6 = 0; // PIN as OUTPUT
@@ -133,12 +135,12 @@ int system_config (void)
     // RESET BACKUP RL78
     PM0_bit.no5 = 0; // PIN as OUTPUT
     PU0_bit.no5 = 1; // Pull-Up on
-    BATTERY_SWITCH_PORT = 1; // Start with High value (1=BACKUP DISABLED, 0=BACKUP ENABLED)
+    SECONDARY_MCU_RESET = 1; // Start with High value (1=BACKUP DISABLED, 0=BACKUP ENABLED)
     
     // REFERENCE SIGNAL FOR BACKUP RL78
     PM3_bit.no0 = 0; // PIN as OUTPUT
     PU3_bit.no0 = 1; // Pull-Up on
-    BATTERY_SWITCH_PORT = 1; // Start with High value 
+    MCU_ALIVE_PORT = 1; // Start with High value 
     
     // DIO 0 - in TX: PacketSent Flag - in RX: PayloadReady Flag
     PM5_bit.no0 = 1; // INPUT - PIN50 set the INTP1 in Rising Edge
@@ -150,14 +152,16 @@ int system_config (void)
     PU5_bit.no1 = 0; // Pull-Up off
     
     
-    LED_PORT = 1;
+    FAULT_LED_PORT = 0;
+	PWR_ON_LED_PORT	= 0;
+	LED_PORT = 1;
     // Radio Register configuration for FSK packet mode
     // Data rate is 4.8kbps
     // Pkt size is 64 bytes
     radio_version_check(); // check if version matches (v12)
     radio_register_config (); // run configuration of sx1276 registers
     LED_PORT = 0;
-    
+
     return (1);
 }
 

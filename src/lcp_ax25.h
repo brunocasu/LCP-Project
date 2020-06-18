@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief Driver for implementing the communication using the AX.25 Link Access (Version 2.2)
  */
 

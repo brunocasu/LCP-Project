@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief Driver for implementing the communication using the AX.25 Link Access Protocol (Version 2.2)
  */
 
@@ -32,8 +34,8 @@
 #include "r_driver/r_cg_timer.h"
 #include "r_driver/r_cg_userdefine.h"
 // RL78G13 includes
-#include "ior5f100le.h"
-#include "ior5f100le_ext.h"
+#include "ior5f100lg.h"
+#include "ior5f100lg_ext.h"
 #include "intrinsics.h"
 // LCP development includes
 #include "lcp_radio_driver.h"
@@ -400,7 +402,9 @@ int ax25_message_manager ( ax25_ret_code_t msg_ret_code,
                         {
                             for (aux=0; aux<=info[1]; aux++)
                             {
-                                LED_PORT = 1;
+                                FAULT_LED_PORT = 0;
+								PWR_ON_LED_PORT	= 0;
+								LED_PORT = 1;
                                 system_delay_ms(50);
                                 LED_PORT = 0;
                                 system_delay_ms(100);

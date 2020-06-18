@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief Driver for the LCP radio device
  */
 
@@ -32,8 +34,8 @@
 #include "r_driver/r_cg_timer.h"
 #include "r_driver/r_cg_userdefine.h"
 // RL78G13 includes
-#include "ior5f100le.h"
-#include "ior5f100le_ext.h"
+#include "ior5f100lg.h"
+#include "ior5f100lg_ext.h"
 #include "intrinsics.h"
 // LCP development includes
 #include "lcp_radio_driver.h"
@@ -236,7 +238,9 @@ void radio_cold_reset (int time)
     if (time > 0)
     {
         RESET_RADIO_PORT = 0;
-        LED_PORT = 1;
+        FAULT_LED_PORT = 0;
+		PWR_ON_LED_PORT	= 0;
+		LED_PORT = 1;
         system_delay_ms (1);
         for (int i=0; i<time; i++)
             system_delay_ms (10);
@@ -249,7 +253,9 @@ void radio_cold_reset (int time)
     else
     {
         RESET_RADIO_PORT = 0;
-        LED_PORT = 1;
+		FAULT_LED_PORT = 0;
+		PWR_ON_LED_PORT	= 0;
+		LED_PORT = 1;
         for(;;); // shut down the radio device
     }
 }

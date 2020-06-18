@@ -15,6 +15,8 @@
  * 
  * @author Bruno Agusto Casu
  *
+ * @revisor Bruno Duarte
+ *
  * @brief Finite State Machine for the LCP Flight Software: implements the receiver routine and replies for commands form the Base Stations
  */
 
@@ -32,8 +34,8 @@
 #include "r_driver/r_cg_timer.h"
 #include "r_driver/r_cg_userdefine.h"
 // RL78G13 includes
-#include "ior5f100le.h"
-#include "ior5f100le_ext.h"
+#include "ior5f100lg.h"
+#include "ior5f100lg_ext.h"
 #include "intrinsics.h"
 // LCP development includes
 #include "lcp_radio_driver.h"
@@ -70,9 +72,25 @@ int lcp_state_machine (void)
     
     base_satation_supervision ();
     if (BATTERY_FAUL_PORT != 0)
-        PWR_ON_LED_PORT = 1;
+    {
+        FAULT_LED_PORT = 0;
+		LED_PORT = 0;
+		PWR_ON_LED_PORT	= 1;
+        system_delay_ms(100);
+        PWR_ON_LED_PORT = 0;
+        system_delay_ms(100);
+        FAULT_LED_PORT = 0;
+		LED_PORT = 0;
+		PWR_ON_LED_PORT	= 1;
+        system_delay_ms(100);
+        PWR_ON_LED_PORT = 0;
+    }
     else
-        FAULT_LED_PORT = 1;
+    {
+        PWR_ON_LED_PORT	= 0;
+		LED_PORT = 0;
+		FAULT_LED_PORT = 1;
+    }
         
     for (;;)
     {
@@ -86,7 +104,9 @@ int lcp_state_machine (void)
                 
                 if (BATTERY_FAUL_PORT == 0)
                 {
-                    FAULT_LED_PORT = 1;
+                    PWR_ON_LED_PORT	= 0;
+					LED_PORT = 0;
+					FAULT_LED_PORT = 1;
                     aux_addr[0] = base_satation_1[0];
                     aux_addr[1] = base_satation_1[1];
                     aux_addr[2] = base_satation_1[2];
@@ -99,6 +119,11 @@ int lcp_state_machine (void)
                     base_satation_supervision ();
                 
                 led_1_blink ();
+                FAULT_LED_PORT = 0;
+				LED_PORT = 0;
+				PWR_ON_LED_PORT	= 1;
+                system_delay_ms(50);
+                PWR_ON_LED_PORT = 0;
                 break;
 
             case MSG_RECEIVED:
