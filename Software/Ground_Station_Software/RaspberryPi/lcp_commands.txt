@@ -1,0 +1,56 @@
+Quick instructions:
+
+- Having your radio shield plugged onto your RaspberryPi/OrangePi;
+- Load the "lcp.py" file into a folder of your choice on your RaspberryPi/OrangePi;
+- With "sudo" privilege, start Python3 on this very same folder;
+- Type in: import lcp
+- Now you're ready to issue any listed command below
+
+Command:		lcp.disconnect()
+Description:	Disconnect form the LCP and closes the session
+
+Command:		lcp.radio_reg_cfg()
+Description:	Configure the local radio registers
+
+Command:		lcp.radio_rssi_floor()
+Description:	Measure the noise floor of the environment
+
+Command:		lcp.base(time)
+Description:	time>0, sets a timeout value, else the radio is maintained at receiver mode
+
+Command:		lcp.send_sensor_read()
+Description:	Request the telemetry data from LCP
+
+Command:		lcp.send_devices_info()
+Description:	Request the device info from LCP
+
+Command:		lcp.send_string_message("target", "msg up to 37 char")
+Description:	Send string message to target (AX25 address)
+
+Command:		lcp.send_reset_radio (time_to_reset)
+Description:	Reset the radio device (time_to_reset*10 = time in miliseconds)
+
+Command:		lcp.send_set_sup_time (interval)
+Description:	Configure the interval between supervisory frames sent from the LCP in seconds
+
+Command:		lcp.send_blink (n_blink)
+Description:	Choose the number of times the LED will blink
+
+Command:		lcp.send_supervisory (nr)
+Description:	Choose a sequence number (0<=nr<=7)
+
+Command:		lcp.set_bit_rate (msb_rate, lsb_rate, msb_fda, lsb_fda)
+Description:	Change the data rate of the satellite
+
+Example:		lcp.set_bit_rate (0x03, 0x41, 0x02, 0x8f)
+Possible values:
+//						examples: 0x68, 0x2a, 0x00, 0x52  -- 1,2kbps, 10kHz FDA
+//						examples: 0x1a, 0x0b, 0x00, 0x52  -- 4,8kbps, 5kHz FDA
+//						examples: 0x0d, 0x05, 0x00, 0xa3  -- 9,6kbps, 10kHz FDA
+//						examples: 0x03, 0x41, 0x02, 0x8f  -- 38,4kbps, 40kHz FDA
+//						examples: 0x00, 0x80, 0x04, 0x00  -- 250kbps, 62,5kHz FDA
+
+Command:		lcp.change_battery (code)
+Description:	0x00 for battery status reading, 0xff to switch to backup, 0xf0 to switch to main
+
+
