@@ -8,6 +8,8 @@
 
 (PT) O projeto de hardware compreende os esquemas elétricos, design das PCBs e também seu BOM (Lista de Materiais) destinados para sua construção.
 
+![MainBoard](https://raw.githubusercontent.com/brn-duarte/LCP-Project/master/Media/20200614_013407.jpg)
+
 ## Flight Software for the LCP platform
 (EN) The target MCU is the Renesas RL78 - R5F100LE, using the RL78 IAR programming and development tool (IAR IDE for the RL78).
 In addition the ground station software is available to RaspberryPi and OrangePi platforms (tests were performed using a Pi Zero W and OrangePi One models).
