@@ -26,10 +26,11 @@ Type in:
 lcp.diconnect() to disconnect
 or CTRL+C to exit.
 
-
 SX1276 Configuration OK
 FLOOR RSSI: - 44.0 dBm
+
 >>> lcp.send_sensor_read ()
+
 INFORMATION FRAME SENT: REQUEST SENSOR READINGS
 SEQUENCE NUMBER N(R): 0x1
 WAITING FOR REPLY...
