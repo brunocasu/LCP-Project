@@ -1,0 +1,14 @@
+# APRESENTAÇÃO DE TCC
+# ENGENHARIA DE TELECOMUNICAÇÕES - PROVA DE CONCEITO
+
+lcp.radio_rssi_floor()
+
+lcp.send_devices_info()
+
+lcp.send_string_message ("FEIBS1", "APROVADO NO TCC")
+
+lcp.send_blink (5)
+
+lcp.base(2)
+
+lcp.diconnect()

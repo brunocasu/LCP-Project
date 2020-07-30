@@ -1,0 +1,4 @@
+Configurações de hardware, OrangePi One:
+
+- Kernel habilitado para SPI canal 0: /dev/spidev0.0
+- Instalados módulos "spidev" e "OPi.GPIO" em ambas versões do python (v2 e v3)
