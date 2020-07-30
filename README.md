@@ -48,10 +48,10 @@ LDR4:             1.30       lux
 LDR5:             4.13       lux
 VOLTAGE:          3.28       V
 CURRENT:          2.10       mA
-BMP280 Temp:     32.04      C
-BMP280 Pres:     175.11     kPa
-BMP280 Pres:     1.31       mmHg
-TIME TO RESPOND: 46.9 ms
+BMP280 Temp:      32.04      C
+BMP280 Pres:      175.11     kPa
+BMP280 Pres:      1.31       mmHg
+TIME TO RESPOND:  46.9       ms
 RECEIVED SIGNAL STRENGTH INDICATION: - 55.5 dBm
 ******************************************************************
 ```
