@@ -8,7 +8,7 @@
 
 (PT) O projeto de hardware compreende os esquemas elétricos, design das PCBs e também seu BOM (Lista de Materiais) destinados para sua construção.
 
-<img width="300" height="300" src="https://raw.githubusercontent.com/brn-duarte/LCP-Project/master/Media/20200614_013407.jpg"> <img width="300" height="300" src="https://raw.githubusercontent.com/brn-duarte/LCP-Project/master/Media/20200616_192936.jpg"> <img width="300" height="300" src="https://raw.githubusercontent.com/brn-duarte/LCP-Project/master/Media/20200614_013852.jpg">
+<img width="150" height="150" src="https://raw.githubusercontent.com/brn-duarte/LCP-Project/master/Media/20200614_013407.jpg"> <img width="150" height="150" src="https://raw.githubusercontent.com/brn-duarte/LCP-Project/master/Media/20200616_192936.jpg"> <img width="150" height="150" src="https://raw.githubusercontent.com/brn-duarte/LCP-Project/master/Media/20200614_013852.jpg">
 
 ## Flight Software for the LCP platform
 (EN) The target MCU is the Renesas RL78 - R5F100LE, using the RL78 IAR programming and development tool (IAR IDE for the RL78).
