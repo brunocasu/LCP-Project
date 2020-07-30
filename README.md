@@ -16,3 +16,50 @@ In addition the ground station software is available to RaspberryPi and OrangePi
 
 (PT) O MCU objetivo de utilização foi o Renesas RL78 - R5F100LE, havendo sido utilizado o RL78 IAR para fins de programação e desenvolvimento (IAR IDE for the RL78).
 Ainda, o software da estação terrena encontra-se disponível para as plataformas RaspberryPi e OrangePi (testes realizados utilizando os modelos Pi Zero W e OrangePi One).
+
+```
+>>> import lcp
+
+
+#######     #######     ##
+#######     #######     ##
+##          ##          ##
+####        ####        ##
+####        ####        ##
+##          ##          ##
+##          #######     ##
+##          #######     ##
+
+LCP script has started.
+Type in:
+lcp.diconnect() to disconnect
+or CTRL+C to exit.
+
+
+SX1276 Configuration OK
+FLOOR RSSI: - 44.0 dBm
+>>> lcp.send_sensor_read ()
+INFORMATION FRAME SENT: REQUEST SENSOR READINGS
+SEQUENCE NUMBER N(R): 0x1
+WAITING FOR REPLY...
+
+MESSAGE RECEIVED (RESPONSE)
+REPLY OF INFORMATION FRAME FROM: FEILCP | SEQUENCE N(S): 0x1 | PAYLOAD CODE: 0xa1
+SENSORS READING REPLY:
+NTC0:             21.81      C
+NTC1:             23.30      C
+LDR0:             3.13       lux
+LDR1:             6.18       lux
+LDR2:             2.20       lux
+LDR3:             0.09       lux
+LDR4:             1.30       lux
+LDR5:             4.13       lux
+VOLTAGE:          3.28       V
+CURRENT:          2.10       mA
+BMP280 Temp:     32.04      C
+BMP280 Pres:     175.11     kPa
+BMP280 Pres:     1.31       mmHg
+TIME TO RESPOND: 46.9 ms
+RECEIVED SIGNAL STRENGTH INDICATION: - 55.5 dBm
+******************************************************************
+```
