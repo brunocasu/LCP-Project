@@ -17,18 +17,9 @@ In addition the ground station software is available to RaspberryPi and OrangePi
 (PT) O MCU objetivo de utilização foi o Renesas RL78 - R5F100LE, havendo sido utilizado o RL78 IAR para fins de programação e desenvolvimento (IAR IDE for the RL78).
 Ainda, o software da estação terrena encontra-se disponível para as plataformas RaspberryPi e OrangePi (testes realizados utilizando os modelos Pi Zero W e OrangePi One).
 
+Execution Example:
 ```
 >>> import lcp
-
-
-#######     #######     ##
-#######     #######     ##
-##          ##          ##
-####        ####        ##
-####        ####        ##
-##          ##          ##
-##          #######     ##
-##          #######     ##
 
 LCP script has started.
 Type in:
