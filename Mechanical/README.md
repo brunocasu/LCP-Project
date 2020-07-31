@@ -1,0 +1,5 @@
+## Mechanical Project
+
+This folder contains the 3D printable .stl files to assembly the LCP mechanical frame
+
+<img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/base.png"><img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/lock_left.png"><img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/lock_right.png"><img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/top.png"><img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/front.png"><img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/lock_front.png"><img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/back.png"><img width="250" height="150" src="https://github.com/brn-duarte/LCP-Project/blob/master/Mechanical/images/lock_back.png">
